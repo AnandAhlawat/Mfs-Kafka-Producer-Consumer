@@ -1,0 +1,15 @@
+server:
+  port: 9091
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+mfs:
+  topic:
+    name: mfs-live-upload-request
+    partition: 2
+
+    groupId: consumer-group-01
